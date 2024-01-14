@@ -1,0 +1,28 @@
+package oguzhanesgiyusufo;
+
+public class PaymentInfo {
+	private final double discountRatio;
+	private double receivedPayment;
+	
+	public PaymentInfo(double discountRatio, double receivedPayment) {
+		super();
+		this.discountRatio = discountRatio;
+		this.receivedPayment = receivedPayment;
+	}
+	
+	public void increasePayment(double amount) {
+		
+	}
+	public double getReceivedPayment() {
+		return receivedPayment;
+	}
+
+	public double getDiscountRatio() {
+		return discountRatio;
+	}
+
+	public void setReceivedPayment(double receivedPayment) {
+		this.receivedPayment = receivedPayment;
+	}
+	
+}

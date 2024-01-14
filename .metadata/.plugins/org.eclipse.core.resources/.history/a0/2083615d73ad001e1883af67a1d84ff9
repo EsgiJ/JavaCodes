@@ -1,0 +1,26 @@
+package oguzhanesgiyusufo;
+
+import static org.junit.Assert.*;
+
+import org.junit.Before;
+import org.junit.Test;
+
+public class DateInfoTest {
+
+    private DateInfo dateInfo;
+
+    @Before
+    public void setUp() {
+        dateInfo = new DateInfo(1, 12, 2022, 2023);
+    }
+
+    @Test
+    public void testGetStartMonth() {
+        assertEquals(1, dateInfo.getStartMonth());
+    }
+
+    @Test
+    public void testGetEndYear() {
+        assertEquals(2023, dateInfo.getEndYear());
+    }
+}

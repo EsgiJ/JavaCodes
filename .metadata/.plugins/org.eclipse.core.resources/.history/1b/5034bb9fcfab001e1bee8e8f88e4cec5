@@ -1,0 +1,58 @@
+package oguzhanesgiyusufo;
+
+public class Subscription {
+	private final DateInfo dates;
+	private PaymentInfo payments;
+	private int copies;
+	private final Journal journal;
+	private final Subscriber subscriber;
+	
+	public Subscription(DateInfo dates, int copies, Journal journal, Subscriber subscriber) {
+		super();
+		this.dates = dates;
+		this.copies = copies;
+		this.journal = journal;
+		this.subscriber = subscriber;
+	}
+	
+	public void acceptPayment(double amount) {
+		payments.increasePayment(amount);
+		System.out.println("Payment accepted for " + journal.getName());
+	}
+	
+	public boolean canSend(int issueMonth) {
+		double totalReceivedPayment = payments.getReceivedPayment();
+		double requiredPayment = copies * journal.getIssuePrice();
+		
+		return totalReceivedPayment>=requiredPayment && dates.getEndMonth()>=issueMonth;
+	}
+
+	public PaymentInfo getPayments() {
+		return payments;
+	}
+
+	public void setPayments(PaymentInfo payments) {
+		this.payments = payments;
+	}
+
+	public int getCopies() {
+		return copies;
+	}
+
+	public void setCopies(int copies) {
+		this.copies = copies;
+	}
+
+	public DateInfo getDates() {
+		return dates;
+	}
+
+	public Journal getJournal() {
+		return journal;
+	}
+
+	public Subscriber getSubscriber() {
+		return subscriber;
+	}
+	
+}

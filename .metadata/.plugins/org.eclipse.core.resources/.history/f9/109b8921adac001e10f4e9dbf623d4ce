@@ -1,0 +1,68 @@
+package oguzhanesgiyusufo;
+
+import javax.swing.SwingUtilities;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Distributor distributor = new Distributor();
+
+        // Örnek bir Journal oluştur
+        Journal journal1 = new Journal("ISSN1001", "Sport Magazine", 12, 12.99);
+        distributor.addJournal(journal1);
+        
+        Journal journal2 = new Journal("ISSN1002", "Science Magazine", 12, 19.99);
+        distributor.addJournal(journal2);
+        
+        Journal journal3 = new Journal("ISSN1003", "Technology Magazine", 12, 24.99);
+        distributor.addJournal(journal3);
+        
+        Journal journal4 = new Journal("ISSN1004", "Fashion Magazine", 12, 29.99);
+        distributor.addJournal(journal4);
+
+        // Örnek bir Individual abonesi oluştur
+        Individual individualSubscriber1 = new Individual("Nuri Bilge Ceylan", "123 Main St",
+                "1234-5678-9012-3456", 12, 2024, 314);
+        distributor.addSubscriber(individualSubscriber1);
+        
+        Individual individualSubscriber2 = new Individual("Zeki Demirkubuz", "123 Main St",
+                "1234-5678-9012-3456", 12, 2024, 314);
+        distributor.addSubscriber(individualSubscriber1);
+
+        // Örnek bir Corporate abonesi oluştur
+        Corporation corporateSubscriber1 = new Corporation("Tech Corp", "456 Tech St",
+                9876, "Tech Bank", 15, 5, 2023, 654321);
+        distributor.addSubscriber(corporateSubscriber1);
+
+        // Örnek bir Subscription oluştur
+        DateInfo subscriptionDates = new DateInfo(1, 1, 2023, 2024);
+        Subscription individualSubscription1 = new Subscription(subscriptionDates, 1, journal1, individualSubscriber1);
+        Subscription corpSubscription1 = new Subscription(subscriptionDates, 1, journal2, individualSubscriber1);
+        distributor.addSubscription(journal1.getiSSN(), individualSubscriber1, individualSubscription1);
+        distributor.addSubscription(journal2.getiSSN(), corporateSubscriber1, corpSubscription1);
+        distributor.addSubscription(journal3.getiSSN(), corporateSubscriber1, corpSubscription1)
+
+        // Örnek bir ödeme al
+        individualSubscription1.acceptPayment(journal1.getIssuePrice());
+        corpSubscription1.acceptPayment(journal1.getIssuePrice());
+
+        // GUI'yi başlat
+        SwingUtilities.invokeLater(new Runnable() {
+            @Override
+            public void run() {
+                DistributorGUI gui = new DistributorGUI(distributor);
+                gui.getFrame().setVisible(true);
+
+                // Rapor oluşturmak için ayrı bir thread başlat
+                Thread reportThread = new Thread(new Runnable() {
+                    @Override
+                    public void run() {
+                        distributor.report();
+                    }
+                });
+                reportThread.start();
+            }
+        });
+    }
+}
+

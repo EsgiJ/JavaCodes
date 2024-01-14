@@ -1,0 +1,5 @@
+package oguzhanesgiyusufo;
+
+public abstract class Subscriber {
+	private String name;
+}

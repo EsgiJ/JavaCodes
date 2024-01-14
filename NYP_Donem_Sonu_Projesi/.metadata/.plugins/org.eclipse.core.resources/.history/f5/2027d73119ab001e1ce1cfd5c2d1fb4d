@@ -1,0 +1,6 @@
+
+public class Journal {
+	private String name;
+	private String ISSN;	
+	private double issuePrice;
+}

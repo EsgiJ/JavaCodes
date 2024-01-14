@@ -1,0 +1,14 @@
+package oguzhanesgiyusufo;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class PaymentInfoTest {
+
+	@Test
+	public void test() {
+		fail("Not yet implemented");
+	}
+
+}

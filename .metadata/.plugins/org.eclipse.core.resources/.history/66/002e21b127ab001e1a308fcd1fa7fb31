@@ -1,0 +1,20 @@
+package oguzhanesgiyusufo;
+
+public class Journal {
+	private String name;
+	private String iSSN;
+	private int frequency;
+	private double issuePrice;
+	
+	public Journal(String name, String iSSN, int frequency, double issuePrice) {
+		super();
+		this.name = name;
+		this.iSSN = iSSN;
+		this.frequency = frequency;
+		this.issuePrice = issuePrice;
+	}
+
+	public addSubscription(Subscription subscription) {
+		
+	}
+}

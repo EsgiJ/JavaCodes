@@ -1,0 +1,6 @@
+
+public class Subscription {
+	private final DateInfo dates;
+	private PaymentInfo payment;
+	private int copies;
+}

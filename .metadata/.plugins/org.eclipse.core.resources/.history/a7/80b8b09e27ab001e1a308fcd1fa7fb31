@@ -1,0 +1,26 @@
+package oguzhanesgiyusufo;
+
+public class Corporation extends Subscriber {
+	private int bankCode;
+	private String bankName;
+	private int issueDay;
+	private int issueMonth;
+	private int issueYear;
+	private int accountNumber;
+	
+	public Corporation(String name, String adress, int bankCode, String bankName, int issueDay, int issueMonth,
+			int issueYear, int accountNumber) {
+		super(name, adress);
+		this.bankCode = bankCode;
+		this.bankName = bankName;
+		this.issueDay = issueDay;
+		this.issueMonth = issueMonth;
+		this.issueYear = issueYear;
+		this.accountNumber = accountNumber;
+	}
+
+	@Override
+	public String getBillingInformation() {
+
+	}
+}

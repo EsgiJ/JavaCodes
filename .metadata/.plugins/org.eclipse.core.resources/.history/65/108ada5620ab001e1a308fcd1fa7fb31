@@ -1,0 +1,6 @@
+package oguzhanesgiyusufo;
+
+public class Individual extends Subscriber {
+	private String creditCardNr;
+	private int expireMonth;
+}

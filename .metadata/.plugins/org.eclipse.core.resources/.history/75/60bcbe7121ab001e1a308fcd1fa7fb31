@@ -1,0 +1,5 @@
+package oguzhanesgiyusufo;
+
+public class Corporation extends Subscriber {
+	private int bankCode;
+}

@@ -1,0 +1,37 @@
+package oguzhanesgiyusufo;
+
+public abstract class Subscriber {
+	private String name;
+	private String adress;
+	
+	public Subscriber(String name, String adress) {
+		super();
+		this.name = name;
+		this.adress = adress;
+	}
+	
+	public boolean hasSubscription(Subscription subscription) {
+	    // Bu metodu Journal sınıfına uygun şekilde doldurun
+	    // Eğer abonelik varsa true, yoksa false dönmelidir.
+	    // Örneğin:
+	    return subscriptions.contains(subscription);
+	}
+	
+	public abstract String getBillingInformation();
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getAdress() {
+		return adress;
+	}
+
+	public void setAdress(String adress) {
+		this.adress = adress;
+	}
+}

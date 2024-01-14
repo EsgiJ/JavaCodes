@@ -1,0 +1,9 @@
+
+public class PaymentInfo {
+	private final int double discountRatio;
+	private double receivedPayment;
+	
+	public void increasePayment(double amount) {
+		
+	}
+}

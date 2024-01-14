@@ -1,0 +1,21 @@
+package oguzhanesgiyusufo;
+
+public class Individual extends Subscriber {
+	private String creditCardNr;
+	private int expireMonth;
+	private int expireYear;
+	private int CCV;
+	
+	public Individual(String name, String adress, String creditCardNr, int expireMonth, int expireYear, int cCV) {
+		super(name, adress);
+		this.creditCardNr = creditCardNr;
+		this.expireMonth = expireMonth;
+		this.expireYear = expireYear;
+		CCV = cCV;
+	}
+
+	@Override
+	public String getBillingInformation() {
+
+	}
+}

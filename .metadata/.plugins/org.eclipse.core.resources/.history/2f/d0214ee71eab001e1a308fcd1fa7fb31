@@ -1,0 +1,6 @@
+package oguzhanesgiyusufo;
+
+public class DateInfo {
+	private int startMonth;
+	private int endMonth;
+}

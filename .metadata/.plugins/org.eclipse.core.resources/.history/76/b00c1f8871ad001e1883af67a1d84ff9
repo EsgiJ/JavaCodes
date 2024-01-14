@@ -1,0 +1,22 @@
+package oguzhanesgiyusufo;
+
+import static org.junit.Assert.*;
+
+import org.junit.Before;
+import org.junit.Test;
+
+public class SubscriberTest {
+
+    private Subscriber individual;
+
+    @Before
+    public void setUp() {
+        individual = new Individual("John Doe", "123 Main St", "1234567812345678", 12, 2023, 123);
+    }
+
+    @Test
+    public void testGetBillingInformation() {
+        assertEquals("Credit Card Number: 1234567812345678 Expire Month: 12 Expire Year12CCV: 123",
+                individual.getBillingInformation());
+    }
+}

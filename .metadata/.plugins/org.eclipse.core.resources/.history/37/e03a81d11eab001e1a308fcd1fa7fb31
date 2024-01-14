@@ -1,0 +1,12 @@
+package oguzhanesgiyusufo;
+
+public class Journal {
+	private String name;
+	private String iSSN;
+	private int frequency;
+	private double issuePrice;
+	
+	public addSubscription() {
+		
+	}
+}

@@ -1,0 +1,13 @@
+package oguzhanesgiyusufo;
+
+public class PaymentInfo {
+	private final double discountRatio;
+	private double receivedPayment;
+	
+	public void increasePayment(double amount) {
+		
+	}
+	public double getReceivedPayment() {
+		
+	}
+}

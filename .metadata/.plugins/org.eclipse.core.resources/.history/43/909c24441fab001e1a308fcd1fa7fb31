@@ -1,0 +1,7 @@
+package oguzhanesgiyusufo;
+
+public class Subscription {
+	private final DateInfo dates;
+	private PaymentInfo payments;
+	private int copies
+}

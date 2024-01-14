@@ -1,0 +1,8 @@
+package oguzhanesgiyusufo;
+
+public class Corporation extends Subscriber {
+	private int bankCode;
+	private String bankName;
+	private int issueDay;
+	private int issueMonth;
+}

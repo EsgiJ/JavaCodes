@@ -1,0 +1,60 @@
+package oguzhanesgiyusufo;
+
+import static org.junit.Assert.*;
+
+import org.junit.Before;
+import org.junit.Test;
+
+public class DistributorGUITest {
+
+    private Distributor distributor;
+    private DistributorGUI distributorGUI;
+
+    @Before
+    public void setUp() {
+        distributor = new Distributor(); // Distributor sınıfını kendi ihtiyaçlarınıza göre başlatın
+        distributorGUI = new DistributorGUI(distributor);
+    }
+
+    @Test
+    public void testDistributorGUIConstructor() {
+        assertNotNull(distributorGUI);
+        assertNotNull(distributorGUI.getFrame());
+        assertEquals("Distributor System", distributorGUI.getFrame().getTitle());
+    }
+
+    // Diğer testler buraya eklenir
+
+    @Test
+    public void testAddSubscriptionButtonActionPerformed() {
+        // Bu metodu test etmek için bir test senaryosu oluşturun, örneğin:
+        // - Abone ekleyin
+        // - Jurnal ekleyin
+        // - Abonelik ekleme işlemini simüle edin
+        // - Abone ve jurnal bilgilerini kullanarak beklenen sonuçları kontrol edin
+
+        // Örnek olarak aşağıdaki gibi olabilir, gerçek senaryoya uygun şekilde güncelleyin:
+        distributor.addSubscriber(new Individual("John Doe", "123 Main St", "1234567812345678", 12, 2023, 123));
+        distributor.addJournal(new Journal("Example Journal", "123-4567", 12, 19.99));
+
+        distributorGUI.getFrame().setVisible(true);
+
+        // Abone ekranına veri girişi simülasyonu
+        distributorGUI.getFrame().getBtnAddSubscription().doClick();
+        String[] inputs = {"John Doe", "123-4567", "3", "1", "2023"};
+
+        for (String input : inputs) {
+            JOptionPane.setInputValue(input);
+        }
+
+        // Abonelik ekleme işlemini simüle et
+        distributorGUI.getFrame().getBtnAddSubscription().doClick();
+
+        // Beklenen sonuçları kontrol et
+        assertEquals(1, distributor.getSubscribers().size());
+        assertEquals(1, distributor.getJournals().size());
+        assertEquals(1, distributor.getJournals().get("123-4567").getSubscriptions().size());
+    }
+
+    // Diğer test metotları buraya eklenir
+}

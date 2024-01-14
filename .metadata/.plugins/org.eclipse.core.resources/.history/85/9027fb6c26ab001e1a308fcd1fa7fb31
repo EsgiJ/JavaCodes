@@ -1,0 +1,14 @@
+package oguzhanesgiyusufo;
+
+public class Corporation extends Subscriber {
+	private int bankCode;
+	private String bankName;
+	private int issueDay;
+	private int issueMonth;
+	private int issueYear;
+	private int accountNumber;
+	@Override
+	public String getBillingInformation() {
+
+	}
+}

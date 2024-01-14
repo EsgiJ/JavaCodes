@@ -1,0 +1,6 @@
+package oguzhanesgiyusufo;
+
+public class PaymentInfo {
+	private final double discountRatio;
+	private double receivedPayment;
+}

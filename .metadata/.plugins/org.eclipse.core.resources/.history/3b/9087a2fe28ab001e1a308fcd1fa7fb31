@@ -1,0 +1,57 @@
+package oguzhanesgiyusufo;
+
+public class Journal {
+	private String name;
+	private String iSSN;
+	private int frequency;
+	private double issuePrice;
+	
+	public Journal(String name, String iSSN, int frequency, double issuePrice) {
+		super();
+		this.name = name;
+		this.iSSN = iSSN;
+		this.frequency = frequency;
+		this.issuePrice = issuePrice;
+	}
+
+	public addSubscription(Subscription subscription) {
+		
+	}
+	
+	private boolean isValidSubscription(Subscription subscription) {
+		return subscription.getSubscriber()!=null && subscription.getJournal()!=null;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getiSSN() {
+		return iSSN;
+	}
+
+	public void setiSSN(String iSSN) {
+		this.iSSN = iSSN;
+	}
+
+	public int getFrequency() {
+		return frequency;
+	}
+
+	public void setFrequency(int frequency) {
+		this.frequency = frequency;
+	}
+
+	public double getIssuePrice() {
+		return issuePrice;
+	}
+
+	public void setIssuePrice(double issuePrice) {
+		this.issuePrice = issuePrice;
+	}
+	
+}

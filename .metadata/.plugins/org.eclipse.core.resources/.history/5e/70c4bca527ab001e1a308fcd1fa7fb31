@@ -1,0 +1,14 @@
+package oguzhanesgiyusufo;
+
+public class DateInfo {
+	private int startMonth;
+	private int endMonth;
+	private int startYear;
+	
+	public DateInfo(int startMonth, int endMonth, int startYear) {
+		super();
+		this.startMonth = startMonth;
+		this.endMonth = endMonth;
+		this.startYear = startYear;
+	}
+}

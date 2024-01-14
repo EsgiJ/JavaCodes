@@ -1,0 +1,14 @@
+package oguzhanesgiyusufo;
+
+public abstract class Subscriber {
+	private String name;
+	private String adress;
+	
+	public Subscriber(String name, String adress) {
+		super();
+		this.name = name;
+		this.adress = adress;
+	}
+	
+	public abstract String getBillingInformation();
+}

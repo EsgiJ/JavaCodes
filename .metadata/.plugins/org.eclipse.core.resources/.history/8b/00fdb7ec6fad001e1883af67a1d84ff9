@@ -1,0 +1,11 @@
+/**
+ * 
+ */
+/**
+ * 
+ */
+module NYP_Donem_Sonu_Projesi {
+	requires java.desktop;
+	requires junit;
+	requires org.junit.jupiter.api;
+}
